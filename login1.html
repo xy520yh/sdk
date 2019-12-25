@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>创世之战</title>
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/qiehuan.js"></script>
+</head>
+
+<body>
+<div class="part part1">
+<div class="topmeau">
+  	<div class="main1">
+    		<ul class="nav">
+                <li> 
+            		<a  href="#">BLEACH 境·界-魂之觉醒</a>
+                </li>
+                <li class="line"></li>
+                <li> 
+            		<a  href="#">洛奇·重生</a>
+                </li>
+                <li class="line"></li>
+                <li> 
+            		<a  href="#">偷星九月天</a>
+                </li>
+                <li class="line"></li>
+                 <li> 
+            		<a  href="#">神魔圣域</a>
+                </li>
+                <li class="line"></li>
+                 <li> 
+            		<a  href="#">仙剑奇侠传移动版</a>
+                </li>
+            </ul>
+          
+    
+    </div>
+  </div>
+<div class="big_bg">
+<div class="wrap">
+	<div class="main">
+    	
+        
+        <div class="main_content">
+        	<div class="main_content_left">
+            	<ul>
+                	<li id="one"><a href="#"><img src="images/list1_img_hover.png" ></a></li>
+                    <li id="two"><a href="#"><img src="images/list2_img.png"  /></a></li>
+                   
+                </ul>
+ 	 		</div>
+            <div class="main_content_right">
+            	<div class="main_content_right1">
+                	<form action="" id="userReg" method="POST" >
+			<div id="zcTxt" class="register1">
+
+				<div class="zcTxtLeft">
+					<ul>
+						    <li><span>普通账号:</span>
+							<input class="input_hui" id="user_name" name="user_name"   type="text" />
+							<br/><span id="user_name_notice" class="" style="padding-left: 115px;text-align: left;width: 380px;"></span>
+						</li>
+												
+						<li><span>手机号码:</span>
+							<input  type="text" class="input_hui" id="mobile" name="mobile"/>
+							<br/><span id="mobile_notice" class="" style="padding-left: 115px;text-align: left;width: 380px;"></span>
+						</li>
+
+						<li>
+							<div id="captchaimagediv" style="position: relative;left:50px;top:30px;"></div>
+							<span>验&nbsp;证&nbsp;码:</span>
+							<input class="input_hui" style="width:100px;"  name="user_code" id="user_code" type="text"   maxlength="4"  autocomplete="off" />
+							<a style="margin:auto;border:1px solid #ccc; background:#DEDEDE; padding:0px 20px; display:inline-block;" class="blue"  href="javascript:void(0);" onclick="flashCaptcha();return false;" onblur="hiddenCaptcha();">看不清验证码</a>
+							<a style="border:1px solid #ccc; background:#DEDEDE; padding:0px 10px; display:inline-block;" class="blue" href="javascript:void(0);"  id="getmobilecode_a">免费获取校验码</a>
+							<br/><span id="user_code_notice" class="" style="padding-left: 115px;text-align: left;width: 380px;"></span>
+						</li>
+						<li><span>校&nbsp;验&nbsp;码:</span>
+							<input class="input_hui" id="mobile_code" name="mobile_code"  type="text" />
+							<br/><span id="mobile_code_notice" class="" style="padding-left: 115px;text-align: left;width: 380px;"></span>
+						</li>
+
+												<li><span>密&nbsp;&nbsp;&nbsp;&nbsp;码:</span>
+							<input class="input_hui" name="password" id="password" onblur="checkValue(this);" type="password" placeholder="8-20个字符，至少包含数字和字母，区分大小写"/>
+							<div id="MM_qd" style="width:365px; padding-left:120px;">
+								<p class="red2 f14 fl" id="password_notice"></p><span style="background-color:#F4F4F4;float: none;">弱</span><span style="background-color:#F4F4F4;float: none;">中</span><span style="background-color:#F4F4F4;float: none;">强</span>
+							</div>
+						</li>
+						<li><span>确认密码:</span>
+							<input class="input_hui" id="password_retype" name="password_retype" />
+							<br/><span id="password_retype_notice" class="" style="padding-left: 115px;text-align: left;width: 380px;"></span>
+						</li>
+						
+						<input name="u" type="hidden" value=""/>
+						<input name="u2" type="hidden" value=""/>
+						<input name="refurl" type="hidden" value=""/>
+						<input  name="type" type="hidden" value="other"/>
+					</ul>
+					<div style="padding:10px 0 50px 120px;" class="xieyi">
+						<div style=" height:60px;line-height:44px; font-size:14px;"><!-- --> <input type="submit" class="btnFont" value="立即注册"/> 已有昆仑通行证?  							<a href="#" class="red underline">立即登录</a></div>
+						<div style="clear:both; line-height:24px; font-size:12px;"><a href="https://www.kunlun.com/agreement.html" target="_blank">用户服务协议</a><br />
+						<a href="https://www.kunlun.com/baomi.html" target="_blank">用户信息保密条款</a><br />
+						<a href="https://www.kunlun.com/shouze.html" target="_blank">平台玩家守则</a></div>
+					</div>
+				</div>
+
+			</div>
+           </form>
+				</div>
+                
+                 <div class="main_content_right1" style="display:none;">
+               			<form method="post" action="https://login.kunlun.com/?act=user.webloginr" id='theForm' onsubmit="submit_login();return false;" >
+                        <div id="zcTxt" class="register1">
+
+				<div class="zcTxtLeft">
+					<ul>
+						    <li><span>账&nbsp;&nbsp;号:</span>
+							<input class="input_hui" id="user_name" name="user_name"   type="text" />
+							<br/><span id="user_name_notice" class="" style="padding-left: 115px;text-align: left;width: 380px;"></span>
+						</li>
+												
+						<li><span>密&nbsp;&nbsp;码:</span>
+							<input  type="text" class="input_hui" id="mobile" name="mobile"/>
+							<br/><span id="mobile_notice" class="" style="padding-left: 115px;text-align: left;width: 380px;"></span>
+						</li>
+
+						<li>
+							<div id="captchaimagediv" style="position: relative;left:50px;top:30px;"></div>
+							<span>验&nbsp;证&nbsp;码:</span>
+							<input class="input_hui" style="width:100px;"  name="user_code" id="user_code" type="text"   maxlength="4"  autocomplete="off" />
+							<a style="margin:auto;border:1px solid #ccc; background:#DEDEDE; padding:0px 20px; display:inline-block;" class="blue"  href="javascript:void(0);" onclick="flashCaptcha();return false;" onblur="hiddenCaptcha();">验证码</a>
+							
+							<br/><span id="user_code_notice" class="" style="padding-left: 115px;text-align: left;width: 380px;"></span>
+						</li>
+						
+						<li style="padding-left:150px;"><input type="submit"  value="登录" class="btnFont"  title="登录" tabindex="4" /> <a href="https://www.kunlun.com/?act=cs.findpwd" style="padding:0 0 0 30px; line-height:40px" target="_blank">忘记密码</a></li>
+											
+					</ul>
+					
+				</div>
+
+			</div>
+			</form>
+                    
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="footer_bg">
+<div class="footer_conter">
+<!--<div class="footer_left"><h1><img src="https://f-cn-1.kunlun.com/pt/v6/kunlun/klcms/v7/images/footer_btn_10.png" alt=""/></h1></div>-->
+<div class="footer_right">
+<p class="footer_nav"><a href="http://company.kunlun.com/html/grow/" target="_blank">公司介绍</a> |     <a href="http://company.kunlun.com/join/" target="_blank">加入我们</a> |     <a href="http://company.kunlun.com/html/contact/" target="_blank">联系我们</a> |<a href="http://static.kunlun.com/v6/jianhu/" target="_blank">家长监护工程</a></p>
+<p class="footer_nav1">北京昆仑万维科技股份有限公司 京ICP备09007496号-2 京公网安备11010102000432号 京网文〔2017〕9195-1044号<a href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/5C2CF6E4DE5448FBBF7CB294AC455E01" target="_blank"> <img src="https://f-cn-1.kunlun.com/pt/v6/kunlun/klcms/v7/images/footer_btn_13.png" width="30" height="30" alt=""/></a> （总）网出证（京）字151号 <br> 健康游戏忠告：抵制不良游戏，拒绝盗版游戏；注意自我保护，谨防受骗上当；适度游戏益脑，沉迷游戏伤身；合理安排时间，享受健康生活。</p></div>
+
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
